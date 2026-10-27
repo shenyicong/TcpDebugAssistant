@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- 输出类型为 Windows 窗口程序（非控制台） -->
+    <OutputType>WinExe</OutputType>
+    <!-- 目标框架：.NET 8 + Windows 桌面（WinForms）。
+         好处：装好 .NET 8 SDK 后，在 VS Code 终端直接 `dotnet run` 即可运行。 -->
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <!-- 启用 Windows 窗体（WinForms 必需，且对 net8 是有效属性） -->
+    <UseWindowsForms>true</UseWindowsForms>
+    <!-- 使用最新 C# 语法 -->
+    <LangVersion>latest</LangVersion>
+    <!-- 关闭隐式命名空间与可空引用，避免与现有代码习惯冲突 -->
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>TcpDebugAssistant</AssemblyName>
+    <RootNamespace>TcpDebugAssistant</RootNamespace>
+    <AssemblyTitle>TCP 调试助手</AssemblyTitle>
+    <Product>TcpDebugAssistant</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- .NET 中 GB2312/GBK 等非内置编码需要此包并注册 CodePages 提供程序 -->
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>

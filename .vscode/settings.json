@@ -1,0 +1,11 @@
+{
+  // 让 C# 扩展直接使用本地已装的 .NET 8 SDK，不再联网下载 .NET 10
+  "dotnetAcquisitionExtension.existingDotnetPath": [
+    "C:\\Users\\零柒\\.dotnet8\\dotnet.exe"
+  ],
+  // 兼容旧版 OmniSharp / C# 扩展
+  "omnisharp.sdkPath": "C:\\Users\\零柒\\.dotnet8",
+  "csharp.dotnetPath": "C:\\Users\\零柒\\.dotnet8\\dotnet.exe",
+  // 关掉自动安装 .NET 的提示，避免弹出超时错误
+  "dotnetAcquisitionExtension.installDotnet": false
+}
